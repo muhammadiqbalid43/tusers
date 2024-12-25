@@ -7,14 +7,22 @@ import type { AppProps } from "next/app";
 
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
-const queryClient = new QueryClient();
+const queryClient = new QueryClient({
+  defaultOptions: {
+    queries: {
+      retry: 1,
+      refetchOnWindowFocus: false,
+      throwOnError: true,
+    },
+  },
+});
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <SidebarProvider>
       <AppSidebar />
 
-      <main className="ring-1 overflow-x-hidden">
+      <main className="overflow-x-hidden">
         <QueryClientProvider client={queryClient}>
           <Component {...pageProps} />
         </QueryClientProvider>
