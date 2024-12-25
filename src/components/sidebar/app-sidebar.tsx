@@ -1,12 +1,11 @@
 import {
-  AudioWaveform,
-  BookOpen,
-  Bot,
-  Command,
   Frame,
   GalleryVerticalEnd,
-  Settings2,
+  Inbox,
+  ShoppingCart,
   SquareTerminal,
+  TicketSlash,
+  User,
 } from "lucide-react";
 
 import {
@@ -20,26 +19,11 @@ import NavMain from "./nav-main";
 import NavProjects from "./nav-projects";
 // This is sample data.
 const data = {
-  user: {
-    name: "shadcn",
-    email: "m@example.com",
-    avatar: "/avatars/shadcn.jpg",
-  },
   teams: [
     {
       name: "Tusers",
       logo: GalleryVerticalEnd,
       plan: "Enterprise",
-    },
-    {
-      name: "Tusers Corp.",
-      logo: AudioWaveform,
-      plan: "Startup",
-    },
-    {
-      name: "Evil Corp.",
-      logo: Command,
-      plan: "Free",
     },
   ],
   navMain: [
@@ -51,84 +35,56 @@ const data = {
       items: [
         {
           title: "Product List",
-          url: "#",
+          url: "/product-list",
         },
-        {
-          title: "Product",
-          url: "#",
-        },
+
         {
           title: "Category List",
-          url: "#",
-        },
-        {
-          title: "Category",
-          url: "#",
+          url: "/category-list",
         },
       ],
     },
     {
-      title: "Models",
+      title: "Customers",
       url: "#",
-      icon: Bot,
+      icon: User,
       items: [
         {
-          title: "Genesis",
-          url: "#",
-        },
-        {
-          title: "Explorer",
-          url: "#",
-        },
-        {
-          title: "Quantum",
-          url: "#",
+          title: "Customers List",
+          url: "/customer-list",
         },
       ],
     },
     {
-      title: "Documentation",
+      title: "Orders",
       url: "#",
-      icon: BookOpen,
+      icon: ShoppingCart,
       items: [
         {
-          title: "Introduction",
-          url: "#",
-        },
-        {
-          title: "Get Started",
-          url: "#",
-        },
-        {
-          title: "Tutorials",
-          url: "#",
-        },
-        {
-          title: "Changelog",
-          url: "#",
+          title: "Order List",
+          url: "/order-list",
         },
       ],
     },
     {
-      title: "Settings",
+      title: "Marketing",
       url: "#",
-      icon: Settings2,
+      icon: TicketSlash,
       items: [
         {
-          title: "General",
-          url: "#",
+          title: "Coupon List",
+          url: "/coupon-list",
         },
+      ],
+    },
+    {
+      title: "Inbox",
+      url: "#",
+      icon: Inbox,
+      items: [
         {
-          title: "Team",
-          url: "#",
-        },
-        {
-          title: "Billing",
-          url: "#",
-        },
-        {
-          title: "Limits",
-          url: "#",
+          title: "List",
+          url: "/inbox-list",
         },
       ],
     },
@@ -136,7 +92,7 @@ const data = {
   projects: [
     {
       name: "Dashboard",
-      url: "#",
+      url: "/",
       icon: Frame,
     },
   ],
