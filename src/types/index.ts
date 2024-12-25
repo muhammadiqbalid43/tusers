@@ -5,4 +5,5 @@ export interface ProductList {
   price: number;
   sku: string;
   stock: number;
+  description: string;
 }
